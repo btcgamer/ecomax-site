@@ -180,7 +180,7 @@
         }
 
         .product-image {
-            height: 230px;
+            height: 250px;
             background: linear-gradient(135deg, #eeeeee, #dddddd);
             display: flex;
             align-items: center;
@@ -189,6 +189,13 @@
             color: #888;
             font-size: 18px;
             font-weight: bold;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .product-content {
@@ -208,14 +215,14 @@
         .product h3 {
             font-size: 21px;
             margin-bottom: 12px;
-            line-height: 1.3;
+            line-height: 1.35;
         }
 
         .product-description {
             color: #555;
             font-size: 15px;
             line-height: 1.65;
-            min-height: 125px;
+            min-height: 120px;
         }
 
         .volume {
@@ -235,6 +242,7 @@
             color: #888;
             text-decoration: line-through;
             font-size: 15px;
+            margin-bottom: 2px;
         }
 
         .new-price {
@@ -252,6 +260,7 @@
             font-size: 12px;
             font-weight: bold;
             margin-left: 6px;
+            vertical-align: middle;
         }
 
         .order-button {
@@ -265,6 +274,7 @@
             border-radius: 8px;
             font-weight: bold;
             margin-top: auto;
+            transition: 0.2s;
         }
 
         .order-button:hover {
@@ -311,9 +321,42 @@
             margin-bottom: 12px;
         }
 
-        .contact p {
+        .contact > p {
             color: #ccc;
-            margin-bottom: 28px;
+            margin-bottom: 35px;
+        }
+
+        .contact-info {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-item {
+            background: #1d1d1d;
+            padding: 25px 15px;
+            border-radius: 12px;
+        }
+
+        .contact-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 8px;
+        }
+
+        .contact-item a {
+            color: #ffd000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-item p {
+            color: #ccc;
         }
 
         footer {
@@ -335,6 +378,7 @@
 
             nav {
                 justify-content: center;
+                gap: 14px;
             }
 
             .hero {
@@ -371,7 +415,6 @@
 
 <section class="hero" id="home">
     <div class="hero-content">
-
         <h1>ECOM<span>AX</span></h1>
 
         <h2>პროფესიონალური ავტოქიმია</h2>
@@ -383,7 +426,6 @@
         <a href="#products" class="main-button">
             პროდუქტების ნახვა
         </a>
-
     </div>
 </section>
 
@@ -402,12 +444,12 @@
 
         <div class="category">
             <div class="category-icon">🧴</div>
-            ძრავისა და დეტალების წმენდა
+            წმენდა
         </div>
 
         <div class="category">
             <div class="category-icon">💦</div>
-            მანქანის სარეცხი ქაფი
+            სარეცხი საშუალებები
         </div>
 
         <div class="category">
@@ -438,9 +480,7 @@
 
         <!-- 1 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №1</div>
@@ -449,7 +489,7 @@
 
                 <div class="product-description">
                     სპეციალური საწმენდი საშუალება ავტომობილის ძრავის,
-                    ზეთის, ცხიმის და სხვა ტექნიკური დაბინძურების
+                    ზეთის, ცხიმისა და სხვა ტექნიკური დაბინძურების
                     მოსაშორებლად. განკუთვნილია ძლიერი დაბინძურებული
                     ზედაპირების ეფექტური წმენდისთვის.
                 </div>
@@ -464,17 +504,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20ძრავის%20სარეცხი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 2 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №2</div>
@@ -498,17 +537,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20მანქანის%20სარეცხი%20ქაფი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 3 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №3</div>
@@ -517,7 +555,7 @@
 
                 <div class="product-description">
                     განკუთვნილია ავტომობილის ნაჭრის ზედაპირების,
-                    სავარძლების და სხვა ტექსტილის დეტალების
+                    სავარძლებისა და სხვა ტექსტილის დეტალების
                     გასაწმენდად. ხელს უწყობს დაგროვილი ჭუჭყისა
                     და ლაქების მოცილებას.
                 </div>
@@ -532,17 +570,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20ნაჭრის%20ქიმწმენდა"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 4 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №4</div>
@@ -566,17 +603,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20ტყავის%20ქიმწმენდა"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 5 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №5</div>
@@ -599,17 +635,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20ტორპედოს%20საპრიალებელი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 6 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №6</div>
@@ -632,17 +667,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20ტყავის%20მკვებავი%20და%20მაცოცხლებელი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 7 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №7</div>
@@ -665,17 +699,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20საბურავის%20საშავებელ-საპრიალებელი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 8 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №8</div>
@@ -689,9 +722,7 @@
                     წებოცემენტის და სხვა ნაგარისთვის.
                 </div>
 
-                <div class="volume">
-                    მოცულობა: დაგვიკავშირდით
-                </div>
+                <div class="volume">მოცულობა: 5 ლიტრი</div>
 
                 <div class="price-box">
                     <div class="new-price">
@@ -699,17 +730,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20ჟანგის,%20გუდრონის%20და%20ნაგარის%20დამშლელი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 9 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №9</div>
@@ -732,17 +762,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20დუხი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 10 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №10</div>
@@ -766,17 +795,16 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20პლასტმასების%20საშავებელ-საპრიალებელი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
 
         <!-- 11 -->
         <div class="product">
-            <div class="product-image">
-                თქვენი პროდუქტის ფოტო
-            </div>
+            <div class="product-image">პროდუქტის ფოტო</div>
 
             <div class="product-content">
                 <div class="product-number">პროდუქტი №11</div>
@@ -800,8 +828,9 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="order-button">
-                    შეკვეთა
+                <a href="https://wa.me/995599881681?text=გამარჯობა,%20მინდა%20შეკვეთა%20—%20ცვილი"
+                   class="order-button" target="_blank">
+                    შეკვეთა WhatsApp-ზე
                 </a>
             </div>
         </div>
@@ -821,8 +850,7 @@
             <div class="advantage-icon">✅</div>
             <h3>ფართო არჩევანი</h3>
             <p>
-                ავტომობილის გარეგანი და შიდა მოვლის
-                სხვადასხვა საშუალება.
+                ავტომობილის გარეგანი და შიდა მოვლის სხვადასხვა საშუალება.
             </p>
         </div>
 
@@ -830,8 +858,7 @@
             <div class="advantage-icon">💰</div>
             <h3>ფასდაკლებული ფასები</h3>
             <p>
-                პროდუქტებზე სპეციალური შეთავაზებები
-                და ფასდაკლებები.
+                სპეციალური შეთავაზებები და ფასდაკლებები.
             </p>
         </div>
 
@@ -839,8 +866,7 @@
             <div class="advantage-icon">🚗</div>
             <h3>ავტომობილის სრული მოვლა</h3>
             <p>
-                სარეცხი, ქიმწმენდა, გაპრიალება და
-                ზედაპირების მოვლა ერთ სივრცეში.
+                სარეცხი, ქიმწმენდა, გაპრიალება და ზედაპირების მოვლა.
             </p>
         </div>
 
@@ -857,15 +883,48 @@
 
 <section class="contact" id="contact">
 
-    <h2>შეუკვეთე ECOMAX</h2>
+    <h2>დაგვიკავშირდით</h2>
 
     <p>
-        პროდუქტის შეკვეთისთვის დაგვიკავშირდით.
+        ECOMAX-ის პროდუქციის შესაძენად დაგვიკავშირდით
     </p>
 
-    <a href="#" class="main-button">
-        დაგვიკავშირდი
-    </a>
+    <div class="contact-info">
+
+        <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <h3>ტელეფონი</h3>
+            <a href="tel:+995599881681">
+                599-88-16-81
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/995599881681" target="_blank">
+                მოგვწერეთ WhatsApp-ზე
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <h3>მისამართი</h3>
+            <p>
+                ქ. ქუთაისი,<br>
+                ზვიად გამსახურდიას N22
+            </p>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <h3>ელფოსტა</h3>
+            <a href="mailto:datogringo@gmail.com">
+                datogringo@gmail.com
+            </a>
+        </div>
+
+    </div>
 
 </section>
 
